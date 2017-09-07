@@ -4,20 +4,30 @@ const mongoose = require("mongoose")
 const bcrypt = require("bcryptjs")
 // mongoose.Promise = require("bluebird")
 const Users = require("../models/Users")
+const Snippet =require("../models/Snippets")
 // const DBUrl = "mongodb://127.0.0.1:27017/snippet"
 // mongoose.connect(DBUrl)
 
-router.get("/", function(req, res){
-  res.redirect("/welcome")
-})
+//
+const requireAuth = function(req, res, next) {
+  // console.log(req.session.user);
+  if (req.session.user) {
+    next()
+  } else {
+    res.redirect("/login")
+  }
+}
 
-router.get("/welcome", function(req, res){
-  res.render("welcome")
-})
-
-router.get("/login", function(req, res){
-  res.render("login")
-})
+router.get("/",  requireAuth, function(req, res) {
+    console.log("Connected");
+    Snippet.find()
+    .then(function(newSnippet){
+      console.log(newSnippet);
+      res.render("index", {
+        newSnippet:newSnippet
+      })
+    })
+  })
 
 router.get("/register", function(req,res){
   res.render("register")
