@@ -22,7 +22,7 @@ router.get("/",  requireAuth, function(req, res) {
     console.log("Connected");
     Snippet.find()
     .then(function(newSnippet){
-      console.log(newSnippet);
+      // console.log(newSnippet);
       res.render("index", {
         newSnippet:newSnippet
       })

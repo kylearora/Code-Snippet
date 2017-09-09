@@ -2,14 +2,16 @@
   <head>
     <meta charset="utf-8">
     <title>Code Snippet</title>
+    <link rel="stylesheet" href="/css/main.css">
   </head>
   <body>
     <a href="/newSnippet">Create a New Snippet</a>
     <div class="">
       {{#newSnippet}}
-        {{title}}
+        <div class="">
+          <a href="/snippet/{{_id}}">{{title}}</a>
+        </div>
       {{/newSnippet}}
     </div>
-
   </body>
 </html>
