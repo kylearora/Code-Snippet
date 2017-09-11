@@ -2,13 +2,14 @@ const express = require("express")
 const router = express.Router()
 const Snippet = require("../models/Snippets")
 
-// const requireAuth = function(req, res, next) {
-//   // console.log(req.session.user);
-//   if (req.session.user) {
-//     next()
-//   } else {
-//     res.redirect("/login")
-//   }
+const requireAuth = function(req, res, next) {
+  // console.log(req.session.user);
+  if (req.session.user) {
+    next()
+  } else {
+    res.redirect("/login")
+  }
+}
 
 router.get("/snippet/:id/edit", function (req, res){
   Snippet.findOne({_id:req.params.id})
@@ -19,7 +20,7 @@ router.get("/snippet/:id/edit", function (req, res){
   })
 })
 
-router.post("/snippet/:id", function (req, res){
+router.post("/snippet/:id", requireAuth, function (req, res){
 Snippet.findOne({ _id: req.params.id }).then(function(newSnippet) {
   const title = req.body.title
   const snippet = req.body.snippet
@@ -44,7 +45,7 @@ Snippet.findOne({ _id: req.params.id }).then(function(newSnippet) {
   })
 })
 
-router.get("/snippet/:id/delete", function(req, res){
+router.get("/snippet/:id/delete", requireAuth, function(req, res){
   Snippet.deleteOne({_id: req.params.id})
   .then(function(newSnippet){
     res.redirect("/")
