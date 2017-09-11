@@ -6,12 +6,39 @@
   </head>
   <body>
     <a href="/newSnippet">Create a New Snippet</a>
-    <div class="">
-      {{#newSnippet}}
+    <div class="allTheSnippets">
+      <div class="bySnippet">
+        <h2>List of Snippets</h2>
+        {{#newSnippet}}
         <div class="">
           <a href="/snippet/{{_id}}">{{title}}</a>
         </div>
-      {{/newSnippet}}
+        {{/newSnippet}}
+      </div>
+
+      <div class="byLanguage">
+        <h2>List of Languages</h2>
+        {{#newSnippet}}
+        <div class="">
+          <a href="/snippet/{{_id}}">{{language}}</a>
+        </div>
+        {{/newSnippet}}
+      </div>
+
+      <div class="byTag">
+        <h2>List of Tags</h2>
+        {{#newSnippet}}
+        <div class="">
+          <a href="/snippet/{{_id}}">{{tags}}</a>
+        </div>
+        {{/newSnippet}}
+      </div>
+    </div>
+
+    <div class="">
+      <div class="">
+        <a href="/sign_out">Sign Out</a>
+      </div>
     </div>
   </body>
 </html>

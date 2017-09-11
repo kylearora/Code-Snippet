@@ -56,4 +56,9 @@ router.post("/register", function(req,res) {
   })
 })
 
+router.get("/sign_out", function(req, res){
+  req.session.user = null;
+  res.redirect("/login")
+})
+
 module.exports = router

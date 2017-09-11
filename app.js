@@ -37,6 +37,9 @@ app.use(newSnippet)
 const snippet = require("./routes/snippet")
 app.use(snippet)
 
+const edit = require("./routes/edit")
+app.use(edit)
+
 
 app.listen(3000, function(){
   console.log("Dang BRO, we are live!")
