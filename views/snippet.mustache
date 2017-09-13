@@ -6,26 +6,32 @@
   </head>
   <body>
     {{#snippet}}
-      <div class="">
-        {{title}}
+      <div class="title">
+        <h2>{{title}}</h2>
       </div>
       <div class="snippetDiv">
+        <h3>Snippet:</h3>
         {{snippet}}
       </div>
-      <div class="">
+      <div class="notes">
+        <h3>Notes:</h3>
         {{notes}}
       </div>
-      <div class="">
+      <div class="language">
+        <h3>Language:</h3>
         {{language}}
       </div>
-      <div class="">
+      <div class="tags">
+        <h3>Tags:</h3>
         {{tags}}
       </div>
-      <div class="edit">
-        <a href="/snippet/{{_id}}/edit">Edit</a>
+      <div class="editDiv">
+        <div class="edit">
+          <a href="/snippet/{{_id}}/edit">Edit</a>
+        </div>
+        <div class="delete">
+          <a href="/snippet/{{_id}}/delete">Delete</a>
       </div>
-      <div class="delete">
-        <a href="/snippet/{{_id}}/delete">Delete</a>
 
       </div>
     </body>

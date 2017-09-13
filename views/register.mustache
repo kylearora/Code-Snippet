@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/register.css">
     <title>Registration Page</title>
   </head>
   <body>
@@ -14,29 +15,29 @@
     </div>
 
 
-    <form class="" action="/register" method="post">
-      <div class="">
-        <label for="">Name</label>
-        <input type="text" name="name" value="">{{#error.name}}What's your Name?{{/error.name}}
+    <form class="registerForm" action="/register" method="post">
+      <label for="">Name</label>
+      <div class="nameDiv">
+        <input id="nameInput" type="text" name="name" value="">{{#error.name}}What's your Name?{{/error.name}}
       </div>
 
-      <div class="">
-        <label for="">Email</label>
-        <input type="email" name="email" value="">{{#error.email}}What's your Email?{{/error.email}}
+      <label for="">Email</label>
+      <div class="emailDiv">
+        <input id="emailInput" type="email" name="email" value="">{{#error.email}}What's your Email?{{/error.email}}
       </div>
 
-      <div class="">
-        <label for="">Username</label>
-        <input type="text" name="username" value="">{{#error.username}}Create a username{{/error.username}}
+      <label for="">Username</label>
+      <div class="usernameDiv">
+        <input id="usernameInput" type="text" name="username" value="">{{#error.username}}Create a username{{/error.username}}
       </div>
 
-      <div class="">
-        <label for="">Password</label>
-        <input type="password" name="password" value="">{{#error.passwordHash}}Create a password{{/error.passwordHash}}
+      <label for="">Password</label>
+      <div class="passwordDiv">
+        <input id="passwordInput" type="password" name="password" value="">{{#error.passwordHash}}Create a password{{/error.passwordHash}}
       </div>
 
-      <div class="">
-        <button type="submit" name="button">Submit</button>
+      <div class="buttonDiv">
+        <button id="submitButton" type="submit" name="button">Submit</button>
       </div>
     </form>
   </body>

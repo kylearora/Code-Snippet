@@ -5,39 +5,44 @@
     <link rel="stylesheet" href="/css/main.css">
   </head>
   <body>
-    <a href="/newSnippet">Create a New Snippet</a>
+    <div class="titleHeader">
+      <h1>Code Snippets</h1>
+    </div>
     <div class="allTheSnippets">
       <div class="bySnippet">
-        <h2>List of Snippets</h2>
+        <h2>Snippets</h2>
         {{#newSnippet}}
-        <div class="">
-          <a href="/snippet/{{_id}}">{{title}}</a>
+        <div class="bySnippets">
+          <a id="snippetsBySnippet" href="/snippet/{{_id}}">{{title}}</a>
         </div>
         {{/newSnippet}}
       </div>
 
       <div class="byLanguage">
-        <h2>List of Languages</h2>
+        <h2>Languages</h2>
         {{#newSnippet}}
         <div class="">
-          <a href="/snippet/{{_id}}">{{language}}</a>
+          <a id="snippetsByLanguage" href="/snippet/{{_id}}">{{language}}</a>
         </div>
         {{/newSnippet}}
       </div>
 
       <div class="byTag">
-        <h2>List of Tags</h2>
+        <h2>Tags</h2>
         {{#newSnippet}}
         <div class="">
-          <a href="/snippet/{{_id}}">{{tags}}</a>
+          <a id="snippetsByTag" href="/snippet/{{_id}}">{{tags}}</a>
         </div>
         {{/newSnippet}}
       </div>
     </div>
 
-    <div class="">
-      <div class="">
-        <a href="/sign_out">Sign Out</a>
+    <div class="linksDiv">
+      <div class="newSnippet">
+        <a id="newSnippetLink" href="/newSnippet">Create a New Snippet</a>
+      </div>
+      <div class="signOut">
+        <a id="signOutLink" href="/sign_out">Sign Out</a>
       </div>
     </div>
   </body>

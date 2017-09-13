@@ -1,5 +1,86 @@
+body {
+  font-family: futura;
+}
+
+.titleHeader {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+}
+
 .allTheSnippets{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  padding-bottom: 25px;
+  background-color: #2F3034;
+  border-top: 2px solid white;
+  border-radius: 10px;
+}
 
+h2 {
+  display: flex;
+  justify-content: center;
+  color: #3AEB7A;
+}
+
+.bySnippet {
+  margin-right: 15px;
+}
+
+#snippetsBySnippet {
+  display: flex;
+  justify-content: center;
+}
+
+.byLanguage {
+  width: 200px;
+
+}
+
+#snippetsByLanguage {
+  display: flex;
+  justify-content: center;
+}
+
+.byTag {
+  margin-left: 15px;
+}
+
+#snippetsByTag {
+  display: flex;
+  justify-content: center;
+}
+
+.linksDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  /*margin-top: 40px;*/
+  border-top: 2px solid white;
+  border-radius: 10px;
+  background-color: black;
+}
+
+.newSnippet {
+  margin-right: 15px;
+}
+
+.signOut {
+  margin-left: 15px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+#newSnippetLink:hover {
+  color: red;
+}
+
+#signOutLink:hover {
+  color: red;
 }

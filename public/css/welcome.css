@@ -1,0 +1,67 @@
+body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: futura;
+  margin-top: 50px;
+}
+
+.loginForm {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+label {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+#usernameInput {
+  width: 250px;
+  height: 30px;
+  border-radius: 5px
+}
+
+.usernameDiv {
+  margin-top: 5px;
+}
+
+
+#passwordInput {
+  width: 250px;
+  height: 30px;
+  border-radius: 5px
+}
+
+.passwordDiv {
+  margin-top: 5px;
+}
+
+.buttonDiv {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+
+#submitButton {
+  height: 40px;
+  width: 100px;
+  border-radius: 10px;
+}
+
+#submitButton:hover {
+  color: white;
+  background-color: #3AEB7A
+}
+
+.registerLink {
+  margin-top: 25px;
+}
+
+a {
+  text-decoration: none;
+}

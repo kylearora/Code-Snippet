@@ -5,36 +5,36 @@
     <title>Code Snippet</title>
   </head>
   <body>
-      <h2>Create a new Snippet</h2>
+      <h2>Create a New Snippet</h2>
 
       <form class="snippet" action="/newSnippet" method="post">
 
-        <div class="">
-          <label for="">Title</label>
-          <input type="text" name="title" value="">
+        <label for="">Title:</label>
+        <div class="title">
+          <input id="titleInput" type="text" name="title" value="">
         </div>
-        <div class="">
-          <label for="">Code Snippet</label>
-          <textarea name="snippet" cols="50" rows="10"value=""></textarea>
+        <label for="">Code Snippet:</label>
+        <div class="snippet">
+          <textarea id="snippetArea" name="snippet" cols="50" rows="10"value=""></textarea>
         </div>
-        <div class="">
-          <label for="">Notes</label>
-          <textarea name="notes" cols="50" rows="5" value=""></textarea>
+        <label for="">Notes:</label>
+        <div class="notes">
+          <textarea id="notesArea" name="notes" cols="50" rows="5" value=""></textarea>
         </div>
-        <div class="">
-          <label for="">Language</label>
-          <select class="" name="language">
+        <label for="">Language:</label>
+        <div class="language">
+          <select class="languageInput" name="language">
             <option value="HTML">HTML</option>
             <option value="CSS">CSS</option>
             <option value="Javascript">Javascript</option>
           </select>
         </div>
-        <div class="">
-          <label for="">Tags</label>
-          <input type="text" name="tags" value="">
+        <label for="">Tags:</label>
+        <div class="tags">
+          <input id="tagsInput" type="text" name="tags" value="">
         </div>
-        <div class="">
-          <button type="submit" name="button">Submit</button>
+        <div class="buttonDiv">
+          <button id="submitButton" type="submit" name="button">Submit</button>
         </div>
       </form>
   </body>
